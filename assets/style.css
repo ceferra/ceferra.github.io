@@ -200,3 +200,9 @@ ul.companies li:nth-child(6n+6) { --c: var(--c6); }
 ul.companies li > a:hover {
   text-decoration: none; background: color-mix(in srgb, var(--c) 8%, var(--card));
 }
+
+main p, ul.news li {
+  text-align: justify;
+  hyphens: auto; -webkit-hyphens: auto;
+}
+main .area p, main p.more { text-align: left; hyphens: manual; }
