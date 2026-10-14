@@ -64,16 +64,14 @@ def render(works):
     parts = []
     for year in sorted(by_year, reverse=True):
         parts.append(f'<h2 class="year" id="y{year}">{year}</h2>\n<ol class="pubs">')
-        for w in sorted(by_year[year], key=lambda w: -(w["cited_by_count"] or 0)):
+        for w in sorted(by_year[year], key=lambda w: w["title"].lower()):
             venue = ((w.get("primary_location") or {}).get("source") or {}).get("display_name") or ""
             title = html.escape(w["title"])
             link = w.get("doi") or ""
             title_html = f'<a href="{link}">{title}</a>' if link else title
-            cites = w["cited_by_count"] or 0
-            badge = f' <span class="cites">{cites} cit.</span>' if cites else ""
             kind = "preprint" if w["type"] == "preprint" else ""
             parts.append(
-                f'<li><span class="pub-title">{title_html}</span>{badge}<br>'
+                f'<li><span class="pub-title">{title_html}</span><br>'
                 f'<span class="pub-authors">{fmt_authors(w["authorships"])}</span><br>'
                 f'<span class="pub-venue">{html.escape(venue)}{" · preprint" if kind and venue else kind}</span></li>')
         parts.append("</ol>")
