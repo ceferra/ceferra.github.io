@@ -5,8 +5,8 @@
   --accent: #9b1c1c;
   --rule: #e4e1da;
   --card: #ffffff;
-  --band-1: #eef2fa;
-  --band-2: #f8eeec;
+  --band-1: #d9e4fb;
+  --band-2: #fbdccf;
   --c1: #b3261e; --c2: #0f766e; --c3: #b45309;
   --c4: #4338ca; --c5: #7e22ce; --c6: #15803d;
   --maxw: 760px;
@@ -21,8 +21,8 @@
     --accent: #f08a7e;
     --rule: #2c2e34;
     --card: #1c1d22;
-    --band-1: #1b2130;
-    --band-2: #241d22;
+    --band-1: #1d2a4d;
+    --band-2: #45202c;
     --c1: #f2877c; --c2: #4fd1c0; --c3: #f5b25c;
     --c4: #a5a8ff; --c5: #d39bff; --c6: #6ee39a;
   }
@@ -57,7 +57,10 @@ nav a:not(.brand):hover { color: var(--accent); text-decoration: none; }
 main { max-width: var(--maxw); margin: 0 auto; padding: 0 16px 64px; }
 
 .band {
-  background: linear-gradient(120deg, var(--band-1), var(--band-2));
+  background:
+    radial-gradient(circle at 88% 15%, color-mix(in srgb, var(--c3) 22%, transparent), transparent 40%),
+    radial-gradient(circle at 10% 100%, color-mix(in srgb, var(--c2) 16%, transparent), transparent 45%),
+    linear-gradient(120deg, var(--band-1), color-mix(in srgb, var(--band-1) 50%, var(--band-2)) 55%, var(--band-2));
   border-bottom: 1px solid var(--rule);
 }
 header.hero {
@@ -154,5 +157,19 @@ ul.news li::before {
 ul.news li:nth-child(2)::before { background: var(--c2); }
 ul.news li:nth-child(3)::before { background: var(--c3); }
 ul.news li:nth-child(4)::before { background: var(--c4); }
+ul.news li:nth-child(5)::before { background: var(--c5); }
+ul.news li:nth-child(6)::before { background: var(--c6); }
+ul.news li:nth-child(7)::before { background: var(--c1); }
+ul.news li:nth-child(8)::before { background: var(--c2); }
+ul.news li:nth-child(9)::before { background: var(--c3); }
+ul.people { list-style: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap; gap: 8px; }
+ul.people li {
+  font: 500 14px var(--sans); padding: 5px 12px; border-radius: 99px;
+  background: color-mix(in srgb, var(--c2) 10%, var(--card));
+  border: 1px solid color-mix(in srgb, var(--c2) 30%, var(--rule));
+}
+ul.people.former li {
+  background: var(--card); color: var(--muted); border-color: var(--rule);
+}
 h3.sub { color: var(--c4); }
 ul.projects.compact li { padding: 6px 0; }
