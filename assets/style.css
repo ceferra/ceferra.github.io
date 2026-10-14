@@ -177,3 +177,26 @@ ul.people.former li {
 }
 h3.sub { color: var(--c4); }
 ul.projects.compact li { padding: 6px 0; }
+
+ul.people li a { color: inherit; }
+ul.people li:has(a):hover { border-color: var(--c2); }
+ul.companies {
+  list-style: none; padding: 0; margin: 0;
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 10px;
+}
+ul.companies li > * {
+  display: flex; align-items: center; justify-content: center; text-align: center;
+  min-height: 56px; padding: 8px 12px; border-radius: 10px;
+  font: 600 15px var(--sans); color: var(--fg);
+  background: var(--card); border: 1px solid var(--rule);
+  border-left: 4px solid var(--c);
+}
+ul.companies li { --c: var(--c1); }
+ul.companies li:nth-child(6n+2) { --c: var(--c2); }
+ul.companies li:nth-child(6n+3) { --c: var(--c3); }
+ul.companies li:nth-child(6n+4) { --c: var(--c4); }
+ul.companies li:nth-child(6n+5) { --c: var(--c5); }
+ul.companies li:nth-child(6n+6) { --c: var(--c6); }
+ul.companies li > a:hover {
+  text-decoration: none; background: color-mix(in srgb, var(--c) 8%, var(--card));
+}
