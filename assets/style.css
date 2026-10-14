@@ -5,8 +5,8 @@
   --accent: #9b1c1c;
   --rule: #e4e1da;
   --card: #ffffff;
-  --band-1: #1e2a4a;
-  --band-2: #8f1d2c;
+  --band-1: #eef2fa;
+  --band-2: #f8eeec;
   --c1: #b3261e; --c2: #0f766e; --c3: #b45309;
   --c4: #4338ca; --c5: #7e22ce; --c6: #15803d;
   --maxw: 760px;
@@ -21,8 +21,8 @@
     --accent: #f08a7e;
     --rule: #2c2e34;
     --card: #1c1d22;
-    --band-1: #151d36;
-    --band-2: #5e1420;
+    --band-1: #1b2130;
+    --band-2: #241d22;
     --c1: #f2877c; --c2: #4fd1c0; --c3: #f5b25c;
     --c4: #a5a8ff; --c5: #d39bff; --c6: #6ee39a;
   }
@@ -57,10 +57,8 @@ nav a:not(.brand):hover { color: var(--accent); text-decoration: none; }
 main { max-width: var(--maxw); margin: 0 auto; padding: 0 16px 64px; }
 
 .band {
-  background:
-    radial-gradient(circle at 85% 20%, rgba(245,178,92,.28), transparent 45%),
-    linear-gradient(120deg, var(--band-1) 0%, #2b3a6b 45%, var(--band-2) 100%);
-  color: #fff;
+  background: linear-gradient(120deg, var(--band-1), var(--band-2));
+  border-bottom: 1px solid var(--rule);
 }
 header.hero {
   max-width: var(--maxw); margin: 0 auto;
@@ -68,22 +66,22 @@ header.hero {
   padding: 52px 16px 44px;
 }
 header.hero-plain { display: block; padding: 44px 16px 36px; }
-.band h1 { color: #fff; }
-.band .role { color: rgba(255,255,255,.82); }
-.band .rank { color: #ffd59a; }
-.band a { color: #ffd59a; }
+.band .rank { color: var(--accent); }
 .avatar {
   width: 150px; height: 150px; border-radius: 50%; object-fit: cover;
-  border: 4px solid rgba(255,255,255,.9); box-shadow: 0 8px 28px rgba(0,0,0,.35);
+  border: 4px solid var(--card); box-shadow: 0 4px 18px rgba(0,0,0,.12);
 }
 h1 { font: 700 2.3rem/1.15 var(--serif); margin: 0 0 6px; letter-spacing: -0.01em; }
 .role { font: 400 1rem/1.5 var(--sans); color: var(--muted); margin: 0 0 14px; }
 .links { display: flex; flex-wrap: wrap; gap: 8px; font: 500 13px var(--sans); }
 .band .links a {
-  color: #fff; background: rgba(255,255,255,.14); border: 1px solid rgba(255,255,255,.25);
+  color: var(--accent); background: var(--card);
+  border: 1px solid color-mix(in srgb, var(--accent) 25%, var(--rule));
   padding: 4px 11px; border-radius: 99px; transition: background .15s;
 }
-.band .links a:hover { background: rgba(255,255,255,.28); text-decoration: none; }
+.band .links a:hover {
+  background: color-mix(in srgb, var(--accent) 10%, var(--card)); text-decoration: none;
+}
 
 section { padding-top: 28px; }
 h2 {
@@ -134,7 +132,7 @@ ul.projects span { display: block; font-size: 15px; color: var(--muted); }
 
 footer {
   padding: 24px 16px 32px; text-align: center; font: 13px var(--sans);
-  color: rgba(255,255,255,.75);
+  color: var(--muted); border-top: 1px solid var(--rule);
   background: linear-gradient(120deg, var(--band-1), var(--band-2));
 }
 
