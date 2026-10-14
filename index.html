@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Cèsar Ferri</title>
-  <meta name="description" content="Cèsar Ferri — researcher in machine learning and AI evaluation at VRAIN, Universitat Politècnica de València.">
+  <meta name="description" content="Cèsar Ferri — Full Professor of machine learning and AI evaluation at VRAIN, Universitat Politècnica de València.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
@@ -14,46 +14,72 @@
 <body>
 <nav><div class="inner">
   <a class="brand" href="./">Cèsar Ferri</a>
+  <a href="#news">News</a>
   <a href="#research">Research</a>
   <a href="#publications">Publications</a>
-  <a href="#software">Software &amp; Data</a>
+  <a href="#software">Software</a>
+  <a href="#service">Service</a>
   <a href="#contact">Contact</a>
 </div></nav>
 
 <main>
   <header class="hero">
-    <!-- Replace assets/avatar.svg with a photo (e.g. assets/photo.jpg) -->
-    <img class="avatar" src="assets/avatar.svg" alt="Cèsar Ferri">
+    <img class="avatar" src="assets/photo.jpg" alt="Portrait of Cèsar Ferri">
     <div>
       <h1>Cèsar Ferri</h1>
-      <!-- TODO: add academic rank, e.g. "Associate Professor · ..." -->
-      <p class="role">VRAIN – Valencian Research Institute for Artificial Intelligence<br>
+      <p class="role"><b class="rank">Full Professor</b> · Department of Computer Systems and Computation (DSIC)<br>
+        VRAIN – Valencian Research Institute for Artificial Intelligence<br>
         Universitat Politècnica de València, Spain</p>
       <div class="links">
-        <a href="https://scholar.google.com/scholar?q=C%C3%A8sar+Ferri">Google Scholar</a>
+        <a href="https://scholar.google.com/citations?user=dZXZGLAAAAAJ">Google Scholar</a>
         <a href="https://orcid.org/0000-0002-8975-1120">ORCID</a>
         <a href="https://dblp.org/search?q=C%C3%A8sar+Ferri">DBLP</a>
         <a href="https://github.com/ceferra">GitHub</a>
+        <a href="https://es.linkedin.com/in/cesarferri">LinkedIn</a>
+        <a href="https://twitter.com/ceferra">X / Twitter</a>
       </div>
     </div>
   </header>
 
   <section id="about">
     <h2>About</h2>
-    <p>I work on machine learning and artificial intelligence at the
-      <a href="https://vrain.upv.es">Valencian Research Institute for Artificial Intelligence (VRAIN)</a>,
-      Universitat Politècnica de València. My research started on how to evaluate
-      classifiers properly: ROC analysis, AUC, calibration, cost curves and threshold choice.
-      It has since grown into a broader question: how to <em>evaluate and predict</em> the behaviour of AI
-      systems, from classifiers to large language models and autonomous agents.</p>
-    <p>I also apply machine learning to real-world problems: urban mobility and air quality,
-      environmental monitoring with computer vision, and education. I maintain several open, continuously
+    <p>I am a Full Professor in the
+      <a href="http://www.upv.es/entidades/DSIC/index.html">Department of Computer Systems and Computation</a>
+      at the <a href="https://www.upv.es">Universitat Politècnica de València</a>, and a member of the
+      <a href="https://sites.google.com/view/dmip">DMIP</a> group at
+      <a href="https://vrain.upv.es">VRAIN</a>, the Valencian Research Institute for Artificial Intelligence,
+      where I have done research since 1999. I am also a member of
+      <a href="https://valgrai.eu/">ValgrAI</a>, the Valencian Graduate School and Research Network of
+      Artificial Intelligence. Since 2009 I have been Assistant Dean for University–Enterprise Relations at the
+      School of Computer Science (<a href="http://www.inf.upv.es">ETSINF</a>).</p>
+    <p>My research began with how to evaluate classifiers properly: ROC analysis, AUC, calibration,
+      cost curves and threshold choice. It has since grown into a broader question: how to
+      <em>evaluate and predict</em> the behaviour of AI systems, from classifiers to large language models
+      and autonomous agents. I also apply machine learning to real-world problems, including urban mobility,
+      air quality, environmental monitoring and education, and I maintain several open, continuously
       updated datasets.</p>
+    <p>I received an MSc in Computer Science (1998) and a PhD (2003) from the Universitat Politècnica de
+      València. My thesis was on applying declarative languages to machine learning.</p>
     <div class="stats">
       <div><b>140+</b>publications</div>
       <div><b>4,000+</b>citations</div>
       <div><b>23</b>h-index</div>
     </div>
+  </section>
+
+  <section id="news">
+    <h2>News</h2>
+    <ul class="news">
+      <li>Organiser of <a href="https://ijclr2026.webs.upv.es/">IJCLR 2026</a>, the International Joint
+        Conference on Learning &amp; Reasoning.</li>
+      <li>Member of the <a href="https://ijclr22.doc.ic.ac.uk/">IJCLR</a> steering committee.</li>
+      <li><a href="https://xai.w.uib.no/">Machine Teaching for Explainable AI</a>: a joint project between the
+        University of Bergen, VRAIN and the industrial partners Equinor and Eviny.</li>
+      <li>“<a href="https://www.nature.com/articles/s41586-024-07930-y">Larger and more instructable language
+        models become less reliable</a>” is published in <em>Nature</em> (2024).</li>
+      <li>Director of the Chair in Artificial Intelligence Applied to Public Administration (2021, 2022).</li>
+      <li>Director of the university extension diploma in Artificial Intelligence, Samsung Innovation Campus (2022).</li>
+    </ul>
   </section>
 
   <section id="research">
@@ -123,15 +149,49 @@
       <li><b><a href="https://github.com/ceferra/costcurvespkg">Cost curves</a></b>
         <span>R tools for cost curves, ROC analysis and threshold-choice methods.</span></li>
     </ul>
+    <h3 class="sub">Earlier software</h3>
+    <ul class="projects compact">
+      <li><b><a href="http://www.dsic.upv.es/~flip/flip/">FLIP</a></b>
+        <span>A functional logic inductive programming system.</span></li>
+      <li><b><a href="http://www.dsic.upv.es/~flip/smiles/">SMILES</a></b>
+        <span>A Stunning Multi-purpose Integrated LEarning System.</span></li>
+      <li><b><a href="http://www.dsic.upv.es/users/elp/synth/synth.tar.gz">SYNTH</a></b> &amp;
+        <b><a href="http://www.dsic.upv.es/users/elp/clop/">CLOP</a></b>
+        <span>A transformation system and an automatic optimiser for functional logic programs.</span></li>
+      <li><b><a href="http://www.dsic.upv.es/~flip/BrierCurves">Brier curves</a></b>,
+        <b><a href="http://www.dsic.upv.es/~flip/RDC">rate-driven curves</a></b> &amp;
+        <b><a href="http://www.dsic.upv.es/~flip/Reg2class/">Reg2Class</a></b>
+        <span>R scripts for threshold choice in cost space (2011–2012) and for turning regression into classification (2014).</span></li>
+      <li><b><a href="http://users.dsic.upv.es/~cferri/weka/">Weka page</a></b>
+        <span>My Weka resources.</span></li>
+    </ul>
+    <p>I co-authored <a href="http://www.dsic.upv.es/~flip/LibroMD/"><em>Introducción a la minería de datos</em></a>,
+      one of the first books on data mining in Spanish.</p>
+  </section>
+
+  <section id="service">
+    <h2>Service &amp; teaching</h2>
+    <h3 class="sub">Editorial boards</h3>
+    <p><a href="https://link.springer.com/journal/10994"><em>Machine Learning</em></a> ·
+      <a href="https://www.journals.elsevier.com/engineering-applications-of-artificial-intelligence/"><em>Engineering Applications of Artificial Intelligence</em></a> ·
+      <a href="http://journal.iberamia.org/index.php/intartif/index"><em>Revista Iberoamericana de Inteligencia Artificial</em></a></p>
+    <h3 class="sub">Programme committees</h3>
+    <p>NeurIPS, ICLR, ICML, IJCAI, AAAI, KDD, ECML-PKDD, WI, MOD, CBMS, AI, IDEAS, ICMLA, IAT and others.</p>
+    <h3 class="sub">Teaching</h3>
+    <p>See my
+      <a href="https://www.upv.es/pls/oalu/SIC_POD.Docencia?P_VISTA=normal&amp;PE=E3C12DD84948DB1B5027071A1B1E49D307907385EC9142656D68C8E1535F3BFA04A5AC31A9F65467118AFDEE05994CA2F6DAAA461E81A2223D4639E87A87D2CD01196B5C595634E83972CA989E6072D7E5005713FA6CF19260DEB2468B4B09023A77BC79E8899867D3F2C3A60CFE804FB5956169CD07FE652394C8C4B5AE2F05&amp;P_N=S&amp;P_IDIOMA=i">current teaching subjects</a> at UPV.</p>
   </section>
 
   <section id="contact">
     <h2>Contact</h2>
-    <!-- TODO: verify e-mail and office -->
-    <p>Departament de Sistemes Informàtics i Computació (DSIC)<br>
+    <p>Office D235 · Department of Computer Systems and Computation (DSIC)<br>
       Universitat Politècnica de València<br>
       Camí de Vera s/n, 46022 València, Spain<br>
-      ✉ <a href="mailto:cferri@dsic.upv.es">cferri@dsic.upv.es</a></p>
+      ✉ <a href="mailto:cferri@dsic.upv.es">cferri@dsic.upv.es</a> ·
+      ☎ <a href="tel:+34963877000,83505">+34 963 877 000 (ext. 83505)</a></p>
+    <p class="more">Also on <a href="https://www.researchgate.net/profile/Cesar_Ferri">ResearchGate</a> ·
+      <a href="https://www.scopus.com/authid/detail.uri?authorId=7103090557">Scopus</a> ·
+      <a href="https://www.researcherid.com/rid/H-9181-2015">ResearcherID</a></p>
   </section>
 </main>
 
