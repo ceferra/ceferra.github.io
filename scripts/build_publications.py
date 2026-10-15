@@ -78,7 +78,18 @@ def render(works):
     return "\n".join(parts)
 
 
+def sync_header(path, title):
+    """Copy <head> and nav from index.html so all pages share one menu."""
+    base = (ROOT / "index.html").read_text().split('<div class="band">')[0]
+    base = base.replace('href="#', 'href="index.html#').replace(
+        "<title>Cèsar Ferri</title>", f"<title>{title} · Cèsar Ferri</title>")
+    page = path.read_text()
+    path.write_text(base + '<div class="band">' + page.split('<div class="band">', 1)[1])
+
+
 def main():
+    sync_header(ROOT / "scripts" / "publications.template.html", "Publications")
+    sync_header(ROOT / "news.html", "Past news")
     works = dedupe(fetch())
     template = (ROOT / "scripts" / "publications.template.html").read_text()
     out = template.replace("{{PUBLICATIONS}}", render(works)).replace("{{COUNT}}", str(len(works)))
