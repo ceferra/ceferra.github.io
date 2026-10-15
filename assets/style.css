@@ -206,3 +206,15 @@ main p, ul.news li {
   hyphens: auto; -webkit-hyphens: auto;
 }
 main .area p, main p.more { text-align: left; hyphens: manual; }
+
+ul.theses { list-style: none; padding: 0; margin: 0; }
+ul.theses li {
+  padding: 8px 0 8px 14px; margin-bottom: 6px;
+  border-left: 3px solid color-mix(in srgb, var(--c2) 45%, transparent);
+  font: 600 15px var(--sans);
+}
+ul.theses li a { color: var(--fg); }
+ul.theses li a:hover { color: var(--accent); }
+ul.theses li span {
+  display: block; font: italic 400 16px/1.45 var(--serif); color: var(--muted); margin-top: 2px;
+}
